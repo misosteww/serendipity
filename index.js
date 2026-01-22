@@ -34,6 +34,12 @@ const client = new Client({
 
 client.once("ready", () => {
   console.log("Bot is online");
+  console.log(`${client.user.tag} is online!`);
+
+  // Set bot status to watching serendipity (lowercase)
+  client.user.setActivity("serendipity", { type: 3 }); // 3 = Watching
+});
+
 });
 
 // --- Assign role dynamically on member join ---
